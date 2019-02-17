@@ -12,3 +12,6 @@ median_times.py Location yyyy-mm-dd hh-hh Path
 
 eg:
 median_times.py Helsinki 2019-01-07 19-20 median_times.csv
+
+After Use you can run commands:
+rm -rf ~/bin
