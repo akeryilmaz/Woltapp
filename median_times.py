@@ -59,9 +59,12 @@ if __name__ == "__main__":
     arguments = sys.argv
     location_ids = ReadLocation(arguments[1])
     hour_range = (int(arguments[3].split("-")[0]), int(arguments[3].split("-")[1]))
-    date = (arguments[2])
-    print("location_id , median")
-    for location_id in location_ids:
-        pickup_times = ReadPickupTimes(location_id, date)
-        median = FindMedian(pickup_times, hour_range)
-        print (location_id, ",", median)
+    date = arguments[2]
+    path = arguments[4]
+    with open(path, mode='w') as output_file:
+        writer = csv.writer(output_file)
+        writer.writerow(["location_id", "median"])
+        for location_id in location_ids:
+            pickup_times = ReadPickupTimes(location_id, date)
+            median = FindMedian(pickup_times, hour_range)
+            writer.writerow([location_id, median])
