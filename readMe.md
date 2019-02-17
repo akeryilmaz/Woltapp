@@ -15,3 +15,5 @@ median_times.py Helsinki 2019-01-07 19-20 median_times.csv
 
 After Use you can run commands:
 rm -rf ~/bin
+
+P.S: For different locations, script can be used, provided that LocationName.csv file is in ~/bin directory.
